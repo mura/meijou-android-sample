@@ -25,6 +25,18 @@ public class Lesson5Activity extends AppCompatActivity {
         setContentView(binding.getRoot());
         dataStore = Lesson5DataStore.getInstance(getApplicationContext());
 
-        dataStore.get(NAME).subscribe(name -> binding.lesson5Text.setText(name));
+        binding.lesson5Button.setOnClickListener(view -> {
+            var text = binding.lesson5EditText.getText().toString();
+            binding.lesson5Text.setText(text);
+            dataStore.set(NAME, text);
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        dataStore.get(NAME)
+                .ifPresent(name -> binding.lesson5Text.setText(name));
     }
 }
