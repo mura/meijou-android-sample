@@ -21,10 +21,13 @@ public class Lesson4Activity extends AppCompatActivity {
         binding = ActivityLesson4Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        setOnClickListener();
-        setTextChangedListener();
+        setOnClickListener();
+//        setTextChangedListener();
     }
 
+    /**
+     * ボタンを押したらTextViewに値をセットする
+     */
     private void setOnClickListener() {
         binding.lesson4Button.setOnClickListener(view -> {
             var text = binding.lesson4EditText.getText();
@@ -32,6 +35,9 @@ public class Lesson4Activity extends AppCompatActivity {
         });
     }
 
+    /**
+     * EditTextの文字が変更されるたびにTextViewを変更する
+     */
     private void setTextChangedListener() {
         binding.lesson4EditText.addTextChangedListener(new TextWatcher() {
             @Override
