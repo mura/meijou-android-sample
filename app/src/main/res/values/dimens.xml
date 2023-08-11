@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lesson7_button_width">72dp</dimen>
+    <dimen name="lesson7_button_height">64dp</dimen>
+</resources>
