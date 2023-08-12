@@ -23,6 +23,7 @@ import jp.ac.meijou.androidsample.lesson4.Lesson4Activity;
 import jp.ac.meijou.androidsample.lesson5.Lesson5Activity;
 import jp.ac.meijou.androidsample.lesson6.Lesson6Activity;
 import jp.ac.meijou.androidsample.lesson7.Lesson7Activity;
+import jp.ac.meijou.androidsample.lesson8.Lesson8FirstActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson4", "EditTextの使い方", Lesson4Activity.class),
                 new ListItem("Lesson5", "DataStoreの使い方", Lesson5Activity.class),
                 new ListItem("Lesson6", "さまざまなUIコンポーネント", Lesson6Activity.class),
-                new ListItem("Lesson7", "電卓を作ろう", Lesson7Activity.class)
+                new ListItem("Lesson7", "電卓を作ろう", Lesson7Activity.class),
+                new ListItem("Lesson8", "ほかのActivityへの画面遷移", Lesson8FirstActivity.class)
         );
         binding.recyclerView.setAdapter(new Adapter(list));
         var layoutManager = new LinearLayoutManager(this);
