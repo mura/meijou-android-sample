@@ -7,13 +7,32 @@
     tools:context=".lesson8.Lesson8SecondActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lesson8_second_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Lesson8 Second"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/lesson8_second_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="OK"
+        app:layout_constraintEnd_toStartOf="@+id/lesson8_second_button_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson8_second_text" />
+
+    <Button
+        android:id="@+id/lesson8_second_button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesson8_second_button_1"
+        app:layout_constraintTop_toTopOf="@+id/lesson8_second_button_1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
