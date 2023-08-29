@@ -3,6 +3,7 @@ package jp.ac.meijou.androidsample.lesson5;
 import android.content.Context;
 
 import androidx.datastore.preferences.core.Preferences;
+import androidx.datastore.preferences.core.PreferencesKeys;
 import androidx.datastore.preferences.rxjava3.RxPreferenceDataStoreBuilder;
 import androidx.datastore.rxjava3.RxDataStore;
 
@@ -13,10 +14,9 @@ import io.reactivex.rxjava3.core.Single;
 /**
  * Lesson5: SharedPreferenceにアクセスするDataStore
  */
-public class Lesson5DataStore {
+public class PrefDataStore {
 
-    private static Lesson5DataStore instance;
-
+    private static PrefDataStore instance;
     private final RxDataStore<Preferences> dataStore;
 
     /**
@@ -24,7 +24,7 @@ public class Lesson5DataStore {
      *
      * @param dataStore DataStore
      */
-    private Lesson5DataStore(RxDataStore<Preferences> dataStore) {
+    private PrefDataStore(RxDataStore<Preferences> dataStore) {
         this.dataStore = dataStore;
     }
 
@@ -34,16 +34,47 @@ public class Lesson5DataStore {
      * @param context Context
      * @return Lesson5DataStoreのインスタンス(シングルトン)
      */
-    public static Lesson5DataStore getInstance(Context context) {
+    public static PrefDataStore getInstance(Context context) {
         if (instance == null) {
             var dataStore = new RxPreferenceDataStoreBuilder(context.getApplicationContext(), "settings").build();
-            instance = new Lesson5DataStore(dataStore);
+            instance = new PrefDataStore(dataStore);
         }
         return instance;
     }
 
     /**
-     * 値を取得する
+     * Stringの値を取得する
+     *
+     * @param key 取得するキー
+     * @return 取得したStringのOptional
+     */
+    public Optional<String> getString(String key) {
+        return dataStore.data()
+                .map(prefs -> {
+                    var prefKey = PreferencesKeys.stringKey(key);
+                    return Optional.ofNullable(prefs.get(prefKey));
+                })
+                .blockingFirst();
+    }
+
+    /**
+     * Stringの値をを保存する
+     *
+     * @param key   保存するキー
+     * @param value 保存する値
+     */
+    public void setString(String key, String value) {
+        dataStore.updateDataAsync(prefsIn -> {
+                    var mutablePreferences = prefsIn.toMutablePreferences();
+                    var prefKey = PreferencesKeys.stringKey(key);
+                    mutablePreferences.set(prefKey, value);
+                    return Single.just(mutablePreferences);
+                })
+                .subscribe();
+    }
+
+    /**
+     * 値を取得する(汎用版)
      *
      * @param key 取得するキー
      * @param <T> 取得する値の型
@@ -56,7 +87,7 @@ public class Lesson5DataStore {
     }
 
     /**
-     * 値を保存する
+     * 値を保存する(汎用版)
      *
      * @param key   保存するキー
      * @param value 保存する値
