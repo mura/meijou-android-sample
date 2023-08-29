@@ -17,6 +17,7 @@ import java.util.List;
 import jp.ac.meijou.androidsample.databinding.ActivityMainBinding;
 import jp.ac.meijou.androidsample.databinding.ListItemBinding;
 import jp.ac.meijou.androidsample.lesson1.Lesson1Activity;
+import jp.ac.meijou.androidsample.lesson10.Lesson10Activity;
 import jp.ac.meijou.androidsample.lesson2.Lesson2Activity;
 import jp.ac.meijou.androidsample.lesson3.Lesson3Activity;
 import jp.ac.meijou.androidsample.lesson4.Lesson4Activity;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson6", "さまざまなUIコンポーネント", Lesson6Activity.class),
                 new ListItem("Lesson7", "電卓を作ろう", Lesson7Activity.class),
                 new ListItem("Lesson8", "ほかのActivityへの画面遷移", Lesson8FirstActivity.class),
-                new ListItem("Lesson9", "ネットワーク通信とJSON", Lesson9Activity.class)
+                new ListItem("Lesson9", "ネットワーク通信とJSON", Lesson9Activity.class),
+                new ListItem("Lesson10", "ネットワーク通信と画像", Lesson10Activity.class)
         );
         binding.recyclerView.setAdapter(new Adapter(list));
         var layoutManager = new LinearLayoutManager(this);
