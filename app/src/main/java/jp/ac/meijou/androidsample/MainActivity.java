@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson4", "EditTextの使い方", Lesson4Activity.class),
                 new ListItem("Lesson5", "DataStoreの使い方", Lesson5Activity.class),
                 new ListItem("Lesson6", "さまざまなUIコンポーネント", Lesson6Activity.class),
-                new ListItem("Lesson7", "電卓を作ろう", Lesson7Activity.class),
                 new ListItem("Lesson7Extra", "ConstraintLayoutの使い方", Lesson7ExtraActivity.class),
+                new ListItem("Lesson7", "電卓を作ろう", Lesson7Activity.class),
                 new ListItem("Lesson8", "ほかのActivityへの画面遷移", Lesson8FirstActivity.class)
         );
         binding.recyclerView.setAdapter(new Adapter(list));
