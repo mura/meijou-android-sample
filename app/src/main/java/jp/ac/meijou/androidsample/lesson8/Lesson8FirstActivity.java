@@ -3,6 +3,8 @@ package jp.ac.meijou.androidsample.lesson8;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -47,6 +49,12 @@ public class Lesson8FirstActivity extends AppCompatActivity {
         // 明示的Intent
         binding.lesson8FirstButton1.setOnClickListener(view -> {
             var intent = new Intent(this, Lesson8SecondActivity.class);
+            startActivity(intent);
+        });
+
+        // camera
+        binding.lesson8CameraButton.setOnClickListener(view -> {
+            var intent = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
             startActivity(intent);
         });
 

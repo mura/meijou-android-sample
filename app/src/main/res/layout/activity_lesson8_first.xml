@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="明示的Intent"
-        app:layout_constraintEnd_toStartOf="@+id/lesson8_first_button_2"
+        app:layout_constraintEnd_toStartOf="@+id/lesson8_camera_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,8 +22,17 @@
         android:layout_height="wrap_content"
         android:text="暗黙的Intent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesson8_first_button_1"
+        app:layout_constraintStart_toEndOf="@+id/lesson8_camera_button"
         app:layout_constraintTop_toTopOf="@+id/lesson8_first_button_1" />
+
+    <Button
+        android:id="@+id/lesson8_camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="camera"
+        app:layout_constraintEnd_toEndOf="@id/lesson8_first_button_2"
+        app:layout_constraintStart_toEndOf="@+id/lesson8_first_button_1"
+        app:layout_constraintTop_toTopOf="@id/lesson8_first_button_1" />
 
     <EditText
         android:id="@+id/lesson8_first_edit_text"
