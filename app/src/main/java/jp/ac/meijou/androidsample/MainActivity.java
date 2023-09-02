@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         var list = List.of(
-                new ListItem("Lesson1", "findViewByIdの使い方", Lesson1Activity.class),
-                new ListItem("Lesson2", "View Bindingの使い方", Lesson2Activity.class),
+                new ListItem("Lesson1", "テキストの編集", Lesson1Activity.class),
+                new ListItem("Lesson2", "画像の表示", Lesson2Activity.class),
                 new ListItem("Lesson3", "Buttonの使い方", Lesson3Activity.class),
                 new ListItem("Lesson4", "EditTextの使い方", Lesson4Activity.class),
                 new ListItem("Lesson5", "DataStoreの使い方", Lesson5Activity.class),
