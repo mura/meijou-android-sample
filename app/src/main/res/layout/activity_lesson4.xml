@@ -22,7 +22,7 @@
         android:id="@+id/lesson4_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="CHANGE!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lesson4_edit_text"
         app:layout_constraintTop_toTopOf="@+id/lesson4_edit_text" />
