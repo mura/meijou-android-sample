@@ -19,7 +19,8 @@ public class Lesson3Activity extends AppCompatActivity {
         binding = ActivityLesson3Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.lesson3Button.setOnClickListener(view ->
-                binding.lesson3Text.setText("Hello Lesson3"));
+        binding.lesson3Button.setOnClickListener(view -> {
+            binding.lesson3Text.setText("Hello Lesson3");
+        });
     }
 }
