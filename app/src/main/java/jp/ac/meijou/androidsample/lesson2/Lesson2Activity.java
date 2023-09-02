@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import jp.ac.meijou.androidsample.databinding.ActivityLesson2Binding;
 
 /**
- * Lesson2: View Bindingの使い方
+ * Lesson2: 画像の表示
  */
 public class Lesson2Activity extends AppCompatActivity {
 
