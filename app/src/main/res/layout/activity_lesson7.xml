@@ -6,167 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".lesson7.Lesson7Activity">
 
-    <Button
-        android:id="@+id/lesson7_button_7"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="64dp"
-        android:text="7"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
-
-    <Button
-        android:id="@+id/lesson7_button_3"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="3"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_minus"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_2"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_6" />
-
-    <Button
-        android:id="@+id/lesson7_button_0"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_equal"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_all_clear"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_2" />
-
-    <Button
-        android:id="@+id/lesson7_button_9"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="64dp"
-        android:text="9"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_divide"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_8"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
-
-    <Button
-        android:id="@+id/lesson7_button_1"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="1"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_4" />
-
-    <Button
-        android:id="@+id/lesson7_button_2"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="2"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_3"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_1"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_5" />
-
-    <Button
-        android:id="@+id/lesson7_button_5"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="5"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_6"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_4"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_8" />
-
-    <Button
-        android:id="@+id/lesson7_button_4"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="4"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_7" />
-
-    <Button
-        android:id="@+id/lesson7_button_6"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="6"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_multiply"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_5"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_9" />
-
-    <Button
-        android:id="@+id/lesson7_button_8"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="64dp"
-        android:text="8"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_9"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_7"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
-
-    <Button
-        android:id="@+id/lesson7_button_equal"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="="
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_plus"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_0"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_3" />
-
-    <Button
-        android:id="@+id/lesson7_button_divide"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="64dp"
-        android:text="÷"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_9"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
-
-    <Button
-        android:id="@+id/lesson7_button_multiply"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="×"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_6"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_divide" />
-
-    <Button
-        android:id="@+id/lesson7_button_minus"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="－"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_3"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_multiply" />
-
-    <Button
-        android:id="@+id/lesson7_button_plus"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="＋"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lesson7_button_equal"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_minus" />
-
-    <Button
-        android:id="@+id/lesson7_button_all_clear"
-        android:layout_width="@dimen/lesson7_button_width"
-        android:layout_height="@dimen/lesson7_button_height"
-        android:layout_marginTop="24dp"
-        android:text="AC"
-        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_1" />
-
+    <!-- 計算結果 -->
     <TextView
         android:id="@+id/lesson7_result"
         android:layout_width="0dp"
@@ -180,5 +20,186 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 1段目 -->
+    <Button
+        android:id="@+id/lesson7_button_7"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top_first"
+        android:text="7"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
+
+    <Button
+        android:id="@+id/lesson7_button_8"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top_first"
+        android:text="8"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_9"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_7"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
+
+    <Button
+        android:id="@+id/lesson7_button_9"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top_first"
+        android:text="9"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_divide"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_8"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
+
+    <Button
+        android:id="@+id/lesson7_button_divide"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top_first"
+        android:text="÷"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_9"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_result" />
+
+    <!-- 2段目 -->
+    <Button
+        android:id="@+id/lesson7_button_4"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="4"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_7" />
+
+    <Button
+        android:id="@+id/lesson7_button_5"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="5"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_6"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_4"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_8" />
+
+    <Button
+        android:id="@+id/lesson7_button_6"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="6"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_multiply"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_5"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_9" />
+
+    <Button
+        android:id="@+id/lesson7_button_multiply"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="×"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_6"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_divide" />
+
+    <!-- 3段目 -->
+    <Button
+        android:id="@+id/lesson7_button_1"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="1"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_4" />
+
+    <Button
+        android:id="@+id/lesson7_button_2"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="2"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_3"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_1"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_5" />
+
+    <Button
+        android:id="@+id/lesson7_button_minus"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="－"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_3"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_multiply" />
+
+    <Button
+        android:id="@+id/lesson7_button_3"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="3"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_minus"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_2"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_6" />
+
+    <!-- 4段目 -->
+    <Button
+        android:id="@+id/lesson7_button_all_clear"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="AC"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_1" />
+
+    <Button
+        android:id="@+id/lesson7_button_0"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="0"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_equal"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_all_clear"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_2" />
+
+    <Button
+        android:id="@+id/lesson7_button_equal"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="="
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/lesson7_button_plus"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_0"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_3" />
+
+    <Button
+        android:id="@+id/lesson7_button_plus"
+        android:layout_width="@dimen/lesson7_button_width"
+        android:layout_height="@dimen/lesson7_button_height"
+        android:layout_marginTop="@dimen/lesson7_button_margin_top"
+        android:text="＋"
+        android:textSize="@dimen/lesson7_button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lesson7_button_equal"
+        app:layout_constraintTop_toBottomOf="@+id/lesson7_button_minus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

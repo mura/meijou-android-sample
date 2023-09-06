@@ -2,4 +2,7 @@
 <resources>
     <dimen name="lesson7_button_width">72dp</dimen>
     <dimen name="lesson7_button_height">64dp</dimen>
+    <dimen name="lesson7_button_margin_top_first">64dp</dimen>
+    <dimen name="lesson7_button_margin_top">24dp</dimen>
+    <dimen name="lesson7_button_text_size">18sp</dimen>
 </resources>
