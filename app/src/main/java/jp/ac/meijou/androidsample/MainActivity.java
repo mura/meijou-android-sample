@@ -20,6 +20,7 @@ import jp.ac.meijou.androidsample.lesson1.Lesson1Activity;
 import jp.ac.meijou.androidsample.lesson10.Lesson10Activity;
 import jp.ac.meijou.androidsample.lesson10.Lesson10AdvancedActivity;
 import jp.ac.meijou.androidsample.lesson11.Lesson11Activity;
+import jp.ac.meijou.androidsample.lesson12.Lesson12Activity;
 import jp.ac.meijou.androidsample.lesson2.Lesson2Activity;
 import jp.ac.meijou.androidsample.lesson3.Lesson3Activity;
 import jp.ac.meijou.androidsample.lesson4.Lesson4Activity;
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson9", "ネットワーク通信とJSON", Lesson9Activity.class),
                 new ListItem("Lesson10", "ネットワーク通信と画像", Lesson10Activity.class),
                 new ListItem("Lesson10Advanced", "パラメータをつけた画像の取得", Lesson10AdvancedActivity.class),
-                new ListItem("Lesson11", "ネットワーク情報の取得", Lesson11Activity.class)
+                new ListItem("Lesson11", "ネットワーク情報の取得", Lesson11Activity.class),
+                new ListItem("Lesson11", "ネットワーク情報の画像", Lesson11Activity.class),
+                new ListItem("Lesson12", "CalendarViewの使い方", Lesson12Activity.class)
         );
         binding.recyclerView.setAdapter(new Adapter(list));
         var layoutManager = new LinearLayoutManager(this);
