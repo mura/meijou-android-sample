@@ -12,6 +12,9 @@ import java.time.format.FormatStyle;
 
 import jp.ac.meijou.androidsample.databinding.ActivityLesson12Binding;
 
+/**
+ * Lesson12: CalendarViewの使い方
+ */
 public class Lesson12Activity extends AppCompatActivity {
 
     private ActivityLesson12Binding binding;
