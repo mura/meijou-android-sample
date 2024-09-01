@@ -37,6 +37,8 @@ public class Lesson9Activity extends AppCompatActivity {
         // リクエスト先にgistを指定
         var request = new Request.Builder()
                 .url("https://api.github.com/gists/c2a7c39532239ff261be")
+                // エラーになる場合は以下のURLを使う
+                //.url("https://mura.github.io/meijou-android-sample/gist.json")
                 .build();
 
         // 非同期通信でリクエスト
