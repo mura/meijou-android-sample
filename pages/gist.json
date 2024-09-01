@@ -1,0 +1,84 @@
+{
+  "url": "https://api.github.com/gists/c2a7c39532239ff261be",
+  "forks_url": "https://api.github.com/gists/c2a7c39532239ff261be/forks",
+  "commits_url": "https://api.github.com/gists/c2a7c39532239ff261be/commits",
+  "id": "c2a7c39532239ff261be",
+  "node_id": "MDQ6R2lzdGMyYTdjMzk1MzIyMzlmZjI2MWJl",
+  "git_pull_url": "https://gist.github.com/c2a7c39532239ff261be.git",
+  "git_push_url": "https://gist.github.com/c2a7c39532239ff261be.git",
+  "html_url": "https://gist.github.com/swankjesse/c2a7c39532239ff261be",
+  "files": {
+    "OkHttp.txt": {
+      "filename": "OkHttp.txt",
+      "type": "text/plain",
+      "language": "Text",
+      "raw_url": "https://gist.githubusercontent.com/swankjesse/c2a7c39532239ff261be/raw/a0098ef88a99d9f7efc42895aa9f2b5d1493d628/OkHttp.txt",
+      "size": 1758,
+      "truncated": false,
+      "content": "\n                         \\\\           //\n                          \\\\  .ooo.  //\n                           .@@@@@@@@@.\n                         :@@@@@@@@@@@@@:\n                        :@@. '@@@@@' .@@:\n                        @@@@@@@@@@@@@@@@@\n                        @@@@@@@@@@@@@@@@@\n\n                   :@@ :@@@@@@@@@@@@@@@@@. @@:\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                   @@@ '@@@@@@@@@@@@@@@@@, @@@\n                        @@@@@@@@@@@@@@@@@\n                        '@@@@@@@@@@@@@@@'\n                           @@@@   @@@@\n                           @@@@   @@@@\n                           @@@@   @@@@\n                           '@@'   '@@'\n\n     :@@@.\n   .@@@@@@@:   +@@       `@@      @@`   @@     @@\n  .@@@@'@@@@:  +@@       `@@      @@`   @@     @@\n  @@@     @@@  +@@       `@@      @@`   @@     @@\n .@@       @@: +@@   @@@ `@@      @@` @@@@@@ @@@@@@  @@;@@@@@\n @@@       @@@ +@@  @@@  `@@      @@` @@@@@@ @@@@@@  @@@@@@@@@\n @@@       @@@ +@@ @@@   `@@@@@@@@@@`   @@     @@    @@@   :@@\n @@@       @@@ +@@@@@    `@@@@@@@@@@`   @@     @@    @@#    @@+\n @@@       @@@ +@@@@@+   `@@      @@`   @@     @@    @@:    @@#\n  @@:     .@@` +@@@+@@   `@@      @@`   @@     @@    @@#    @@+\n  @@@.   .@@@  +@@  @@@  `@@      @@`   @@     @@    @@@   ,@@\n   @@@@@@@@@   +@@   @@@ `@@      @@`   @@@@   @@@@  @@@@#@@@@\n    @@@@@@@    +@@   #@@ `@@      @@`   @@@@:  @@@@: @@'@@@@@\n                                                     @@:\n                                                     @@:\n                                                     @@:"
+    }
+  },
+  "public": true,
+  "created_at": "2014-05-27T02:31:35Z",
+  "updated_at": "2021-02-28T20:53:26Z",
+  "description": "",
+  "comments": 1,
+  "user": null,
+  "comments_url": "https://api.github.com/gists/c2a7c39532239ff261be/comments",
+  "owner": {
+    "login": "swankjesse",
+    "id": 133019,
+    "node_id": "MDQ6VXNlcjEzMzAxOQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/133019?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/swankjesse",
+    "html_url": "https://github.com/swankjesse",
+    "followers_url": "https://api.github.com/users/swankjesse/followers",
+    "following_url": "https://api.github.com/users/swankjesse/following{/other_user}",
+    "gists_url": "https://api.github.com/users/swankjesse/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/swankjesse/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/swankjesse/subscriptions",
+    "organizations_url": "https://api.github.com/users/swankjesse/orgs",
+    "repos_url": "https://api.github.com/users/swankjesse/repos",
+    "events_url": "https://api.github.com/users/swankjesse/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/swankjesse/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "forks": [
+
+  ],
+  "history": [
+    {
+      "user": {
+        "login": "swankjesse",
+        "id": 133019,
+        "node_id": "MDQ6VXNlcjEzMzAxOQ==",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133019?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/swankjesse",
+        "html_url": "https://github.com/swankjesse",
+        "followers_url": "https://api.github.com/users/swankjesse/followers",
+        "following_url": "https://api.github.com/users/swankjesse/following{/other_user}",
+        "gists_url": "https://api.github.com/users/swankjesse/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/swankjesse/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/swankjesse/subscriptions",
+        "organizations_url": "https://api.github.com/users/swankjesse/orgs",
+        "repos_url": "https://api.github.com/users/swankjesse/repos",
+        "events_url": "https://api.github.com/users/swankjesse/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/swankjesse/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "version": "9a0954a7ad441639abd625bdf1543461abeb706d",
+      "committed_at": "2014-05-27T02:31:35Z",
+      "change_status": {
+        "total": 39,
+        "additions": 39,
+        "deletions": 0
+      },
+      "url": "https://api.github.com/gists/c2a7c39532239ff261be/9a0954a7ad441639abd625bdf1543461abeb706d"
+    }
+  ],
+  "truncated": false
+}
