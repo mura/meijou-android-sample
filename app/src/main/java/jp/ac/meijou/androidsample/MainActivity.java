@@ -67,16 +67,7 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerView.addItemDecoration(itemDecoration);
     }
 
-    private static class ListItem {
-        public final String title;
-        public final String description;
-        public final Class<?> activity;
-
-        private ListItem(String title, String description, Class<?> activity) {
-            this.title = title;
-            this.description = description;
-            this.activity = activity;
-        }
+    private record ListItem(String title, String description, Class<?> activity) {
     }
 
     private static class ViewHolder extends RecyclerView.ViewHolder {
