@@ -24,18 +24,18 @@ public class Lesson8FirstActivity extends AppCompatActivity {
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 switch (result.getResultCode()) {
-                    case RESULT_OK:
+                    case RESULT_OK -> {
                         Optional.ofNullable(result.getData())
                                 .map(data -> data.getStringExtra("ret"))
                                 .map(text -> "Result: " + text)
                                 .ifPresent(text -> binding.lesson8FirstText.setText(text));
-                        break;
-                    case RESULT_CANCELED:
+                    }
+                    case RESULT_CANCELED -> {
                         binding.lesson8FirstText.setText("Result: Canceled");
-                        break;
-                    default:
+                    }
+                    default -> {
                         binding.lesson8FirstText.setText("Result: Unknown(" + result.getResultCode() + ")");
-                        break;
+                    }
                 }
             }
     );
