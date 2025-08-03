@@ -6,8 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,8 +43,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         var list = List.of(
                 new ListItem("Lesson1", "テキストの編集", Lesson1Activity.class),
@@ -57,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson10", "ネットワーク通信と画像", Lesson10Activity.class),
                 new ListItem("Lesson10Advanced", "パラメータをつけた画像の取得", Lesson10AdvancedActivity.class),
                 new ListItem("Lesson11", "ネットワーク情報の取得", Lesson11Activity.class),
-                new ListItem("Lesson11", "ネットワーク情報の画像", Lesson11Activity.class),
                 new ListItem("Lesson12", "CalendarViewの使い方", Lesson12Activity.class)
         );
         binding.recyclerView.setAdapter(new Adapter(list));

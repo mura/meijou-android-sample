@@ -5,7 +5,11 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Process;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -39,8 +43,14 @@ public class Lesson5RoomActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         binding = ActivityLesson5RoomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         // Room(データベース)はメインスレッドで操作できないのでサブスレッドを作成する
         handlerThread = new HandlerThread("db-thread", Process.THREAD_PRIORITY_DEFAULT);
@@ -58,7 +68,7 @@ public class Lesson5RoomActivity extends AppCompatActivity {
         asyncHandler.post(() -> {
             // 非同期で全ユーザーリストを取得
             var userList = userDao.getAll();
-            userListAdapter.submitList(userList);
+            runOnUiThread(() -> userListAdapter.submitList(userList));
         });
 
         // RecyclerViewの設定
