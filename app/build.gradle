@@ -1,15 +1,18 @@
 plugins {
     id 'com.android.application'
+    id 'androidx.room'
 }
 
 android {
     namespace 'jp.ac.meijou.androidsample'
-    compileSdk 34
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         applicationId "jp.ac.meijou.androidsample"
         minSdk 24
-        targetSdk 34
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -32,6 +35,10 @@ android {
     }
 }
 
+room {
+    schemaDirectory "$projectDir/schemas"
+}
+
 dependencies {
     implementation libs.appcompat
     implementation libs.material
@@ -48,5 +55,4 @@ dependencies {
     implementation libs.moshi
     implementation libs.room.runtime
     annotationProcessor libs.room.compiler
-
 }
