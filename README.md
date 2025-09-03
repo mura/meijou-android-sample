@@ -4,4 +4,4 @@
 
 ## 開発環境
 
-Android Studio Narwhal Feature Drop | 2025.1.2
+Android Studio Narwhal 3 Feature Drop | 2025.1.3
