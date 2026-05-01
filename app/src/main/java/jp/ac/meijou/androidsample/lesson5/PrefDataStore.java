@@ -13,6 +13,10 @@ import io.reactivex.rxjava3.core.Single;
 
 /**
  * Lesson5: SharedPreferenceにアクセスするDataStore
+ * <p>
+ * Shared Preferencesの後継である Preference DataStore を利用したデータ保存クラスです。
+ * Key-Value形式でデータを管理し、設定値など小さな値の保存に適しています。
+ * 同時操作によるデータの不整合を防ぐため、シングルトンとして実装されています。
  */
 public class PrefDataStore {
 
@@ -21,6 +25,8 @@ public class PrefDataStore {
 
     /**
      * コンストラクタ
+     * <p>
+     * クラス外部から勝手にインスタンスを作らせないよう、可視性を private に設定しています。
      *
      * @param dataStore DataStore
      */
@@ -35,7 +41,9 @@ public class PrefDataStore {
      * @return Lesson5DataStoreのインスタンス(シングルトン)
      */
     public static PrefDataStore getInstance(Context context) {
+        // 同時に複数操作されても不整合が起きないよう、プログラム中で唯一のインスタンス（シングルトン）を生成・利用します
         if (instance == null) {
+            // "settings" という名前のPreference DataStoreを構築
             var dataStore = new RxPreferenceDataStoreBuilder(context.getApplicationContext(), "settings").build();
             instance = new PrefDataStore(dataStore);
         }
@@ -51,10 +59,11 @@ public class PrefDataStore {
     public Optional<String> getString(String key) {
         return dataStore.data()
                 .map(prefs -> {
+                    // Preference DataStore は型安全ではないため、保存時と読み出し時の型（ここではString）を明示的に合わせるキーを生成します
                     var prefKey = PreferencesKeys.stringKey(key);
                     return Optional.ofNullable(prefs.get(prefKey));
                 })
-                .blockingFirst();
+                .blockingFirst(); // 非同期ストリームから最初の値を同期的に取得
     }
 
     /**
@@ -64,13 +73,16 @@ public class PrefDataStore {
      * @param value 保存する値
      */
     public void setString(String key, String value) {
+        // 非同期でデータを更新する
         dataStore.updateDataAsync(prefsIn -> {
+                    // 書き換え可能なPreferencesに変換する
                     var mutablePreferences = prefsIn.toMutablePreferences();
                     var prefKey = PreferencesKeys.stringKey(key);
+                    // 指定したキーに対して値をセット
                     mutablePreferences.set(prefKey, value);
                     return Single.just(mutablePreferences);
                 })
-                .subscribe();
+                .subscribe(); // 実行のトリガー
     }
 
     /**
