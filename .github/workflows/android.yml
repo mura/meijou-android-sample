@@ -12,26 +12,39 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v6
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: gradle
-
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-
-    - name: Remove strict JVM daemon properties to use setup-java JDK
-      run: rm -f gradle/gradle-daemon-jvm.properties
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v5
 
     - name: Run Unit Tests
       run: ./gradlew testDebugUnitTest -Porg.gradle.java.installations.auto-download=false
+
+    - name: AVD cache
+      uses: actions/cache@v5
+      id: avd-cache
+      with:
+        path: |
+          ~/.android/avd/*
+          ~/.android/adb*
+        key: avd-36
+
+    - name: Create AVD and generate snapshot for caching
+      if: steps.avd-cache.outputs.cache-hit != 'true'
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 36
+        force-avd-creation: false
+        emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+        disable-animations: false
+        script: echo "Generated AVD snapshot for caching."
 
     - name: Run Instrumented Tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 36
+        force-avd-creation: false
+        emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+        disable-animations: true
         script: ./gradlew connectedAndroidTest -Porg.gradle.java.installations.auto-download=false
