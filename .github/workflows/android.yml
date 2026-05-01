@@ -15,8 +15,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v6
 
+    - name: Setup JDK
+      uses: actions/setup-java@v5
+      with:
+        distribution: temurin
+        java-version: 17
+
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v5
+      uses: gradle/actions/setup-gradle@v6
+
+    - name: Remove strict JVM daemon properties to use setup-java JDK
+      run: rm -f gradle/gradle-daemon-jvm.properties
 
     - name: Run Unit Tests
       run: ./gradlew testDebugUnitTest -Porg.gradle.java.installations.auto-download=false
