@@ -1,25 +1,18 @@
-package jp.ac.meijou.androidsample;
+package jp.ac.meijou.androidsample.main;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import jp.ac.meijou.androidsample.databinding.ActivityMainBinding;
-import jp.ac.meijou.androidsample.databinding.ListItemBinding;
 import jp.ac.meijou.androidsample.lesson1.Lesson1Activity;
 import jp.ac.meijou.androidsample.lesson10.Lesson10Activity;
 import jp.ac.meijou.androidsample.lesson10.Lesson10AdvancedActivity;
@@ -36,6 +29,10 @@ import jp.ac.meijou.androidsample.lesson7.Lesson7ExtraActivity;
 import jp.ac.meijou.androidsample.lesson8.Lesson8FirstActivity;
 import jp.ac.meijou.androidsample.lesson9.Lesson9Activity;
 
+/**
+ * アプリの起動時に表示されるメイン画面のActivityです。
+ * 各レッスンの画面へ遷移するためのリストを表示します。
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -52,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // 表示するレッスンのリストデータを作成
         var list = List.of(
                 new ListItem("Lesson1", "テキストの編集", Lesson1Activity.class),
                 new ListItem("Lesson2", "画像の表示", Lesson2Activity.class),
@@ -69,59 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 new ListItem("Lesson11", "ネットワーク情報の取得", Lesson11Activity.class),
                 new ListItem("Lesson12", "CalendarViewの使い方", Lesson12Activity.class)
         );
-        binding.recyclerView.setAdapter(new Adapter(list));
+
+        // RecyclerViewにアダプターを設定
+        binding.recyclerView.setAdapter(new MainAdapter(list));
+
+        // レイアウトマネージャーを設定
         var layoutManager = new LinearLayoutManager(this);
         binding.recyclerView.setLayoutManager(layoutManager);
+
+        // リスト項目間に区切り線を引くためのItemDecorationを追加
         var itemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
         binding.recyclerView.addItemDecoration(itemDecoration);
-    }
-
-    private record ListItem(String title, String description, Class<?> activity) {
-    }
-
-    private static class ViewHolder extends RecyclerView.ViewHolder {
-        private final ListItemBinding binding;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            binding = ListItemBinding.bind(itemView);
-        }
-
-        public void onBind(ListItem value) {
-            binding.title.setText(value.title);
-            binding.description.setText(value.description);
-        }
-    }
-
-    private static class Adapter extends RecyclerView.Adapter<ViewHolder> {
-        private final List<ListItem> list;
-
-        public Adapter(List<ListItem> list) {
-            this.list = list;
-        }
-
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            var view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.list_item, parent, false);
-            var viewHolder = new ViewHolder(view);
-            view.setOnClickListener(itemView -> {
-                var item = list.get(viewHolder.getAdapterPosition());
-                var intent = new Intent(itemView.getContext(), item.activity);
-                itemView.getContext().startActivity(intent);
-            });
-            return viewHolder;
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            holder.onBind(list.get(position));
-        }
-
-        @Override
-        public int getItemCount() {
-            return list.size();
-        }
     }
 }
