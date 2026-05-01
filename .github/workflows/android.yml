@@ -24,6 +24,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
+    - name: Remove strict JVM daemon properties to use setup-java JDK
+      run: rm -f gradle/gradle-daemon-jvm.properties
+
     - name: Run Unit Tests
       run: ./gradlew testDebugUnitTest -Porg.gradle.java.installations.auto-download=false
 
