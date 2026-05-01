@@ -25,10 +25,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run Unit Tests
-      run: ./gradlew testDebugUnitTest
+      run: ./gradlew testDebugUnitTest -Porg.gradle.java.installations.auto-download=false
 
     - name: Run Instrumented Tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
-        api-level: 29 # 安定して動作するAPI 29を指定
-        script: ./gradlew connectedAndroidTest
+        api-level: 36
+        script: ./gradlew connectedAndroidTest -Porg.gradle.java.installations.auto-download=false
