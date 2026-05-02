@@ -155,16 +155,16 @@ public class Lesson7Activity extends AppCompatActivity {
      * </p>
      */
     private enum Operator {
-        /** 加算（operand1 + operand2） */
+        // 加算（operand1 + operand2）
         PLUS(Integer::sum),
-        /** 減算（operand1 − operand2） */
+        // 減算（operand1 − operand2）
         MINUS((a, b) -> a - b),
-        /** 乗算（operand1 × operand2） */
+        // 乗算（operand1 × operand2）
         MULTIPLY((a, b) -> a * b),
-        /** 除算（operand1 ÷ operand2）※ゼロ除算は未ガード */
+        // 除算（operand1 ÷ operand2）※ゼロ除算は未ガード
         DIVIDE((a, b) -> a / b);
 
-        /** この演算子に対応する計算処理。 */
+        // この演算子に対応する計算処理。
         public final BiFunction<Integer, Integer, Integer> calc;
 
         Operator(BiFunction<Integer, Integer, Integer> calc) {

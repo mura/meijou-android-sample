@@ -53,6 +53,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(libs.espresso.intents)
     androidTestImplementation(libs.espresso.contrib)
+    androidTestImplementation(libs.mockito.core)
+    androidTestImplementation(libs.mockito.android)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation(libs.datastore.preferences)

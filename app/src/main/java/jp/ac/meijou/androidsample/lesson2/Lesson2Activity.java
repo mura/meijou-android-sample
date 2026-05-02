@@ -8,7 +8,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import jp.ac.meijou.androidsample.R;
 import jp.ac.meijou.androidsample.databinding.ActivityLesson2Binding;
 
 /**
