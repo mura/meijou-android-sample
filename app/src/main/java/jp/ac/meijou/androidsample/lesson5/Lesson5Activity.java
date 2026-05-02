@@ -22,7 +22,7 @@ public class Lesson5Activity extends AppCompatActivity {
      * レイアウトファイル（activity_lesson5.xml）と紐付くView Bindingオブジェクト。
      */
     private ActivityLesson5Binding binding;
-    
+
     /**
      * DataStoreを操作するためのヘルパークラスのインスタンス。
      * （設定値などの保存に適しており、通常シングルトンとして扱います）
@@ -48,7 +48,7 @@ public class Lesson5Activity extends AppCompatActivity {
 
         // DataStoreのインスタンスを取得（シングルトン）
         dataStore = PrefDataStore.getInstance(getApplicationContext());
-        
+
         // "name" というキーで保存されている文字列を読み込み、存在すればTextViewにセットする
         dataStore.getString("name")
                 .ifPresent(name -> binding.lesson5Text.setText(name));
