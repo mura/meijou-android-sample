@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "jp.ac.meijou.androidsample"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "jp.ac.meijou.androidsample"
@@ -28,8 +28,8 @@ android {
     }
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     buildFeatures {
         viewBinding = true

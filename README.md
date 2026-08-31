@@ -4,9 +4,6 @@
 
 ## 開発環境
 
-- Android Studio Panda 4 | 2025.3.4
-- AGP 9.1.1
-- Gradle 9.4.1
-
-## 既知の課題
-- AGP 9.2.0 に上げると実行時にクラッシュする
+- Android Studio Quail 3 | 2026.1.3 Patch 1
+- AGP 9.3.2
+- Gradle 9.5.0
