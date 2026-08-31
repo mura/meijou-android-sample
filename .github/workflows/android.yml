@@ -44,7 +44,7 @@ jobs:
         path: |
           ~/.android/avd/*
           ~/.android/adb*
-        key: avd-36
+        key: avd-36-pixel6
 
     - name: Create AVD and generate snapshot for caching
       if: steps.avd-cache.outputs.cache-hit != 'true'
@@ -53,6 +53,7 @@ jobs:
         api-level: 36
         target: google_apis
         arch: x86_64
+        profile: pixel_6
         force-avd-creation: false
         emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         disable-animations: false
@@ -64,6 +65,7 @@ jobs:
         api-level: 36
         target: google_apis
         arch: x86_64
+        profile: pixel_6
         force-avd-creation: false
         emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         disable-animations: true
